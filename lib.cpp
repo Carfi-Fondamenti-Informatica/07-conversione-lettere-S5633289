@@ -1,15 +1,29 @@
+//
+// Created by Davide on 02/12/2022.
+//
 #include "lib.h"
-bool funzione(char a,char &t) {
+bool funzione(char a,char &t)
+{
     int b;
     b= (int) a;
-    if(b<=122&&b>=97){
+    if(b<=122&&b>=97)
+    {
         b=b-32;
         t= (char) b;
         return true;
-    }else if(b<=90&&b>=65){
-        b=b+32;
-        t= (char) b;
-        return true;
-    }else {return false;}
+    }
+    else
+    {
+        if(b<=90&&b>=65)
+        {
+            b=b+32;
+            t= (char) b;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 }
